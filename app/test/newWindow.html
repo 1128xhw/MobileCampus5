@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>newWindow.html</div>
+<script>
+//    var MSEOP = {
+//        Platform: function () {
+//            var userAgent = navigator.userAgent;
+//            var isAndroid = /(Android)/i.test(userAgent); //android终端
+//            var isiOS = /(iPhone|iPad|iPod|iOS)/i.test(userAgent); //ios终端
+//            var returnText = 'unknow';
+//            if (isAndroid) {
+//                returnText = 'Android';
+//            } else if (isiOS) {
+//                returnText = 'iOS';
+//            }
+//            return returnText;
+//        }
+//    };
+//    var platform = MSEOP.Platform();
+//    MSEOP.Webview = {
+//        open: function (url) {
+//            var plugIn = {
+//                isAndroid: function () {
+//                    var postData = {"action": "open", "data": {"url": url}};
+//                    postData = JSON.stringify(postData);
+//                    window.postMessage.webview(postData)
+//                },
+//                isiOS: function () {
+//                    var postData = {"action": "open", "data": {"url": url}};
+//                    window.webkit.messageHandlers.webview.postMessage(postData);
+//                }
+//            };
+//
+//            (platform == 'iOS') ? plugIn.isiOS() : plugIn.isAndroid();
+//        },
+//        close: function () {
+//            var plugIn = {
+//                isAndroid: function () {
+//                    var postData = {"action": "close", "data": ''};
+//                    postData = JSON.stringify(postData);
+//                    window.postMessage.webview(postData);
+//                },
+//                isiOS: function () {
+//                    var postData = {"action": "close", "data": ''};
+//                    window.webkit.messageHandlers.webview.postMessage(postData);
+//                }
+//            };
+//
+//            (platform == 'iOS') ? plugIn.isiOS() : plugIn.isAndroid();
+//        },
+//        remoteWeb: function (url,title) {
+//            var plugIn = {
+//                isAndroid: function () {
+//                    var postData = {"action":" remoteWeb","data":{"url":url,"title":title}};
+//                    postData = JSON.stringify(postData);
+//                    window.postMessage.webview(postData)
+//                },
+//                isiOS: function () {
+//                    var postData = {"action":" remoteWeb","data":{"url":url,"title":title}};
+//                    window.webkit.messageHandlers.webview.postMessage(postData);
+//                }
+//            };
+//
+//            (platform == 'iOS') ? plugIn.isiOS() : plugIn.isAndroid();
+//        }
+//    };
+
+    try{
+        //MSEOP.Webview.remoteWeb('http://www.baidu.com','百度');
+        //MSEOP.Webview.open('http://www.eco-edu.cn');
+        //var postData = {"action":" remoteWeb","data":{"url":"http://www.baidu.com","title":"百度"}};
+        //window.webkit.messageHandlers.webview.postMessage(postData)
+
+        var postData = {"action":"remoteWeb","data":{"url":"http://www.eco-edu.cn","title":"百度"}};
+        postData = JSON.stringify(postData);
+        alert(postData)
+        window.postMessage.webview(postData)
+        alert("113")
+    }catch (err){
+        alert(JSON.stringify(err))
+    }
+
+
+
+</script>
+</body>
+</html>

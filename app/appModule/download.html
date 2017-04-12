@@ -1,0 +1,33 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">下载</div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="download" class="page no-toolbar">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <div class="title_s">文件下载存放地址：</div>
+                                <pre class="preBreak" id="filePath"></pre>
+                                <br>
+                                <div class="title_s">下载进度：</div>
+                                <div class="ks-demo-progressbar-inline title_s">
+                                    <p><span id="progressbar" data-progress="0" class="progressbar"><span style="transform: translate3d(-90%, 0px, 0px);"></span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="downloadtest()" class="button button-big button-fill color-green">点击开始下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

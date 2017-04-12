@@ -1,0 +1,238 @@
+/*body{*/
+/*font-size: 0;*/
+/*}*/
+
+.content-block {
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.messageContent-block {
+    padding: 0;
+    margin-top: 0;
+}
+
+.fa-15x {
+    font-size: 1.5em;
+}
+
+.margin-t5 {
+    margin-top: 5px !important;
+}
+
+.page[data-page="messages"] .toolbar {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-transition: 0ms;
+    -o-transition: 0ms;
+    transition: 0ms;
+}
+
+/*.appWrapper {*/
+/*background-color: white;*/
+/*border: 1px solid rgba(229, 229, 229, 0);*/
+/*text-align: center;*/
+/*padding: 0.3em;*/
+/*}*/
+
+.appWrapper > img {
+    width: 35%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.appName {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    bottom: 13px;
+}
+
+.appWrapper {
+    display: inline-block;
+    width: 24%;
+    font-size: 12px;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.appWrapper:before {
+    content: "";
+    display: inline-block;
+    padding-bottom: 80%;
+    width: .1px;
+    vertical-align: middle;
+}
+
+.appWrapper > span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 4em;
+    color: #fff;
+}
+
+.btn_l {
+    width: 65%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin: auto auto 1em;
+    border-radius: 5px;
+    background-color: #d5d5de;
+    font-size: 1em;
+}
+
+.preBreak {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.bottom20 {
+    bottom: 20px !important;
+}
+
+.title_s {
+    color: #9e9e9e;
+}
+
+.appModuleWrapper {
+    border: 1px solid white;
+    margin: 5px auto 10px;
+    width: 95%;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.appModuleTitle {
+    font-size: 16px;
+    margin: 14px auto auto 15px;
+}
+
+.navbar a.link {
+    line-height: 100% !important;
+}
+
+.setBImg {
+    background-image: url("../img/set.png");
+}
+
+.articleBImg {
+    background-image: url("../img/article.png");
+}
+
+.statisticsBImg {
+    background-image: url("../img/unit.png");
+}
+
+.serviceBImg {
+    background-image: url("../img/service.png");
+}
+
+.photoBImg {
+    background-image: url("../img/photo.png");
+}
+
+.scoreBImg {
+    background-image: url("../img/score.png");
+}
+
+.listIconBImg {
+    width: 29px;
+    height: 29px;
+    border-radius: 6px;
+}
+
+.fontC {
+    color: #4d4d4d;
+    font-weight: 600 !important;
+}
+
+.mBlist-block ul:before {
+    height: 0 !important;
+}
+
+.contactIcon {
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-style: normal;
+    position: relative;
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/i-f7-ios.png");
+    border-radius: 6px;
+}
+
+.myInfo_s {
+    margin: 10px auto 0;
+}
+
+.mT15 {
+    margin: 15px auto 0;
+}
+
+.mT8 {
+    margin-top: 8px;
+}
+
+.mT12 {
+    margin-top: 12px;
+}
+
+.margin-t15 {
+    margin-top: 15px;
+}
+
+.loginLogo {
+    background-image: url('../login/assets/img/logo.png?ff');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+}
+
+/*@media screen and (min-width: 720px) {*/
+    /*.loginLogo{*/
+        /*margin-top: 0!important;*/
+    /*}*/
+/*}*/
+
+#supersized{
+    margin-top: 0!important;
+}
+
+.username{
+    margin-top: 0!important;
+}
+
+.accountIcon{
+    height: 50px;
+    width: 50px;
+    margin: auto auto 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.accountIcon_stu{
+    background-image: url('../login/assets/img/avr.png?ff');
+}
+
+.accountIcon_tec{
+    background-image: url('../login/assets/img/avk.png?ff');
+}
+
+.accountIcon_pt{
+    background-image: url('../login/assets/img/pt.png?ff');
+}

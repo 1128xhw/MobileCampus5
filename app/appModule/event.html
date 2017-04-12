@@ -1,0 +1,29 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">事件监听</div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="event" class="page no-toolbar">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner">
+                    <a href="#" style="margin-bottom: 1em;" onclick="onPageInit()" class="button button-big button-fill color-green">打开程序初始化监听</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="appOnBackstage()" class="button button-big button-fill color-green">打开程序进入后台监听</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="appOnReception()" class="button button-big button-fill color-green">打开程序进入前台监听</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="pageOnBackstage()" class="button button-big button-fill color-green">打开页面进入后台监听</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="pageOnReception()" class="button button-big button-fill color-green">打开页面进入后台监听</a>
+                    <br>
+                    <div>
+                        注：1.程序初始化监听监听功能是页面加载完成后的回调，此处无效果。
+                        2.页面进入前后台适用于多页面应用，此处无效果。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">设备功能</div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="devicce" class="page no-toolbar">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label" style="width: 25%;">电话号码</div>
+                                        <div class="item-input">
+                                            <input id="phoneNum" type="tel" placeholder="电话号码"/>
+                                        </div>
+                                        <div onclick="dial()" class="btn_l"
+                                             style="font-size: 15px;margin-bottom: auto;background-color: #4cd964;color: white;">打电话
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label" style="width: 75%;">屏幕常量</div>
+                                        <div class="item-input">
+                                            <label class="label-switch" onclick="setWakelock()">
+                                                <input id="setWakelock" type="checkbox"/>
+                                                <div class="checkbox"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" style="margin-bottom: 1em;" onclick="vibrate()" class="button button-big button-fill color-green">手机震动</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="beep()" class="button button-big button-fill color-green">声音提醒</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="deleteCache()" class="button button-big button-fill color-green">清除缓存</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="myApp.alert('该功能暂不开放体验。')" class="button button-big button-fill color-green">打开新webview</a>
+                    <a href="#" style="margin-bottom: 1em;" onclick="myApp.alert('该功能只作为开发接口，不开放体验。')" class="button button-big button-fill color-green">关闭当前所有网页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

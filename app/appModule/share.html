@@ -1,0 +1,80 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">信鸽推送</div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="share" class="page no-toolbar">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div class="content-block-inner">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <div class="title_s">请输入需要分享的文字：</div>
+                                <div class="list-block" style="margin: 0;border-color: white;">
+                                    <div class="item-content" style="border-color: white;">
+                                        <textarea id="shareText" style="font-size: 14px;"
+                                                  placeholder="M-SEOP有大量可以直接使用的UI组件和工具，大部分的组件你都完全不需要写任何JS代码。具备iOS 和 Google Material两种风格的主题，可以方便快捷的开发出具有iOS&Android风格的APP。"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openOption('text')" class="button button-big button-fill color-green">分享文字</a>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner" style="text-align: center;">
+                                <div class="title_s" style="margin-bottom: 10px;text-align: left;">分享图片：</div>
+                                <img src="http://139.196.38.33:2222/document/shareFile/image.png" width="60%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openOption('image')" class="button button-big button-fill color-green">分享图片</a>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner">
+                                <div class="title_s">分享网址：</div>
+                                <div style="margin: 10px 15px auto;">http://app.izhihuidao.com/mseop</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openOption('url')" class="button button-big button-fill color-green">分享网址</a>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner" style="text-align: center;">
+                                <div class="title_s" style="text-align: left;">分享音频：</div>
+                                <audio controls style="width:90%; height:50px">
+                                    <source src="http://139.196.38.33:2222/document/shareFile/audio.mp3"
+                                            type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openOption('audio')" class="button button-big button-fill color-green">分享音频</a>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-content-inner" style="text-align: center;">
+                                <div class="title_s" style="text-align: left;margin-bottom: 10px;">分享视频：</div>
+                                <video controls style="width: 90%">
+                                    <source src="http://139.196.38.33:2222/document/shareFile/video.mp4"
+                                            type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openOption('video')" class="button button-big button-fill color-green">分享视频</a>
+                    <br>
+                    <div>
+                        注：1.因网络或腾讯服务器原因，偶尔会出现操作失败情况。
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

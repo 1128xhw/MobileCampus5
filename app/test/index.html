@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="expires" content="0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>移动校园</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../css/framework7.ios.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="../css/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/fonts/css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css?dasdfdg">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/MSEOP.css">
+    <link rel="stylesheet" href="../css/kitchen-sink.css">
+    <link rel="stylesheet" href="../login/assets/css/style.css?dddd">
+    <script type="text/javascript" src="../js/jquery-2.0.min.js"></script>
+    <script type="text/javascript" src="../js/framework7.js"></script>
+
+</head>
+<body class="framework7-root">
+
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Tabs, 现在容器是"views" -->
+<div class="views tabs toolbar-fixed">
+    <!-- Tab 1 同时也是 View 1, 默认激活 -->
+    <div id="tab1" class="view tab active">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">View 1</div>
+            </div>
+        </div>
+        <div class="pages navbar-fixed">
+            <div data-page="home-1" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <p>This is view 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab 2 - View 2 -->
+    <div id="tab2" class="view tab">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">View 2</div>
+            </div>
+        </div>
+        <div class="pages navbar-fixed">
+            <div data-page="home-2" class="page">
+                <div class="page-content">
+                    <div class="content-block">
+                        <p>This is view 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab 3 - View 3 -->
+    <div id="tab3" class="view tab">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">View 3</div>
+            </div>
+        </div>
+        <div class="pages navbar-fixed">
+            <div data-page="home-3" class="page">
+                <div class="page-content">
+                    <form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+                        <div class="searchbar-input">
+                            <input type="search" placeholder="输入分组或联系人"><a href="#" class="searchbar-clear"></a>
+                        </div>
+                        <a href="#" class="searchbar-cancel">取消</a>
+                    </form>
+                    <div class="searchbar-overlay"></div>
+                    <div class="list-block searchbar-not-found">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">没有找到分组或联系人...</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-block-title" style="margin-top: 20px;">群组</div>
+                    <div class="list-block media-list search-here searchbar-found" style="margin-top: 10px;">
+                        <ul>
+                            <li>
+                                <a href="#" class="item-link item-content contactGroup">
+                                    <div class="item-media">
+                                        <img src="img/contactIcon/1.jpg" width="44">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                            <div class="item-title">语文教研组</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content contactGroup">
+                                    <div class="item-media">
+                                        <img src="img/contactIcon/4.jpg" width="44">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                            <div class="item-title">三年级班主任</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content contactGroup">
+                                    <div class="item-media">
+                                        <img src="img/contactIcon/5.jpg" width="44">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                            <div class="item-title">周五值班组</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class-->
+    <!--<div class="view view-main" id="indexView">-->
+        <!--&lt;!&ndash; Top Navbar&ndash;&gt;-->
+        <!--<div class="navbar"></div>-->
+        <!--&lt;!&ndash; Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes&ndash;&gt;-->
+        <!--<div class="pages navbar-through tabbar-labels-through">-->
+            <!--&lt;!&ndash; Page, data-page contains page name&ndash;&gt;-->
+            <!--<div data-page="index" class="page"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!-- 带有链接的标签栏 -->
+    <div id="aa" class="toolbar tabbar">
+        <div class="toolbar-inner">
+            <a href="#tab1" class="tab-link active"><i class="icon icon-f7"></i></a>
+            <a href="#tab2" class="tab-link"><i class="icon icon-f7"></i></a>
+            <a href="#tab3" class="tab-link"><i class="icon icon-f7"></i></a>
+        </div>
+    </div>
+</div>
+<!--modal-in-->
+<div class="login-screen">
+    <div class="view">
+        <div class="pages navbar-through tabbar-labels-through">
+            <div data-page="login" class="page">
+                <div id="loginPageContent" class="page-content loginPageContent">
+                    <div class="loginLogo"></div>
+                    <div class="page-container">
+                        <h1 id="loginTitle">移动校园</h1>
+                        <form id="loginForm">
+                            <input type="text" name="username" class="username loginInput" placeholder="用户名">
+                            <input type="password" name="password" class="password loginInput" placeholder="密码">
+                            <button id="loginButton" type="button">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                            <div class="error"><span>+</span></div>
+                        </form>
+                        <div style="margin: 30px auto auto;width: 80%;color: #fff">
+                            <div style="display: flex;text-align: center;">
+                                <div onclick="login('20200101','111111')" style="flex: 1;">
+                                    <div class="accountIcon accountIcon_stu"></div>
+                                    <div>学生账号</div>
+                                </div>
+                                <div onclick="login('chenchen@hsefzcz.net','111111')" style="flex: 1;">
+                                    <div class="accountIcon accountIcon_tec"></div>
+                                    <div>老师账号</div>
+                                </div>
+                                <div onclick="login('20200101','111111')" style="flex: 1;">
+                                    <div class="accountIcon accountIcon_pt"></div>
+                                    <div>家长账号</div>
+                                </div>
+                            </div>
+                            <div style="text-align: center;margin-top: 15px;">点击体验帐号，即可自动登录！</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script src="http://192.168.1.110:1234/target/target-script-min.js#anonymous"></script>-->
+<script type="text/javascript" src="../js/RAS/jsencrypt.min.js"></script>
+<script type="text/javascript" src="../js/MSEOP-SDK.js"></script>
+<script type="text/javascript" src="../js/commen.js"></script>
+<script type="text/javascript" src="my-app.js?wwhjkw"></script>
+<script type="text/javascript" src="../message/js/messageBox.js"></script>
+<script type="text/javascript" src="../message/js/messageList.js"></script>
+<script type="text/javascript" src="../message/js/messageDetail.js"></script>
+<script type="text/javascript" src="../myContent/js/myInfo.js"></script>
+<!--<script type="text/javascript" src="../mainTab/js/mainTab.js"></script>-->
+<script type="text/javascript" src="../login/assets/js/supersized.js"></script>
+<script type="text/javascript" src="../login/assets/js/loginScripts.js"></script>
+<script type="text/javascript" src="../contactContent/js/contactList.js"></script>
+<script type="text/javascript" src="../contactContent/js/contactTab.js"></script>
+<script type="text/javascript" src="../js/kitchen-sink.js"></script>
+
+</body>
+</html>

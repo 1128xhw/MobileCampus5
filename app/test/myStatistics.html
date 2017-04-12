@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="/SchoolMobile/Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/SchoolMobile/Content/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/SchoolMobile/Content/css/LoginPublic.css">
+    <link rel="stylesheet" type="text/css" href="/SchoolMobile/Content/css/TabPublic.css">
+    <link rel="stylesheet" href="/SchoolMobile/Content/css/ListPublic.css" />
+    <link rel="stylesheet" type="text/css" href="/SchoolMobile/Content/css/BtnPublic.css">
+    <link rel="stylesheet" href="/SchoolMobile/Content/css/Public.css" />
+    <link rel="stylesheet" href="/SchoolMobile/Content/css/Footer.css" />
+
+    <link rel="stylesheet" href="/SchoolMobile/Content/css/mui.picker.min.css" />
+
+    <script src="/SchoolMobile/Content/js/jquery-1.11.3.min.js"></script>
+    <script src="/SchoolMobile/Content/js/JsRender/jsrender.js"></script>
+    <script src="/SchoolMobile/Content/js/LinqJs/linq.min.js"></script>
+    <script src="/SchoolMobile/Content/js/mui.min.js"></script>
+
+    <script src="/SchoolMobile/Content/js/mui.picker.min.js"></script>
+
+
+    <script src="/SchoolMobile/Content/js/public.js"></script>
+
+    <script type="text/javascript">
+        var _ROOT_ = 'http://hsefzcz.istudy.sh.cn/SchoolMobile/';
+        var _ROOT_Api_ = 'http://hsefzcz.istudy.sh.cn/SchoolMobileApi/api/';
+        var _GuidEmpty = "00000000-0000-0000-0000-000000000000";
+
+        ///跳转页面
+        function CallBack(title, url) {
+            //if (mui.os.ios) {
+            //    window.webkit.messageHandlers.WindowComponent_openWindow.postMessage({
+            //        "url": url,
+            //        "title": title
+            //    });
+            //} else if (mui.os.android) {
+            //    window.WindowComponent_openWindow.postMessage(url,
+            //		title
+            //	);
+            //}
+            window.location.href = url;
+        }
+
+        /*html接受参数*/
+        function GetQueryString(str, LocString) {
+            var rs = new RegExp("(^|)" + str + "=([^&]*)(&|$)", "gi").exec(LocString),
+                    tmp;
+            if (tmp = rs) return tmp[2];
+            return "没有这个参数";
+        }
+
+        ///获取更新时间
+        function getDayNew(result) {
+            var date = new Date();
+            var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+            var minutes = date.getUTCMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            result = "更新时间：" + hour + ":" + minutes;
+            return result;
+        }
+
+        $.views.helpers({
+            SubString: function (str, num) {
+                var result = str;
+                if (str !== null && str !== "") {
+                    result = str.replace(/<[^>]+>/g, "");
+                    if (str.length > num && num > 0) {
+                        result = result.substring(0, num) + "...";
+                    }
+                }
+                return result;
+            },
+            TimeFormatter: function (time) {
+                var datetime = new Date(parseInt(time.replace("/Date(", "").replace(")/", ""), 10));
+                var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                var result = datetime.getFullYear() + "-" + month + "-" + currentDate;
+                return result;
+            },
+            MMddFormatter: function (time) {
+                var result = "";
+                if (time != null) {
+                    var datetime = new Date(time);
+                    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                    var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                    result = month + "-" + currentDate;
+                    if (result == "1970-01-01") {
+                        result = "";
+                    }
+                }
+                return result;
+            },
+            MMddHHmmFormatter: function (time) {
+                var result = "";
+                if (time != null) {
+                    var datetime = new Date(time);
+                    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                    var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                    var hour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                    var minutes = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                    result = month + "-" + currentDate + " " + hour + ":" + minutes;
+                    if (result == "1970-01-01") {
+                        result = "";
+                    }
+                }
+                return result;
+            },
+            yyyyMMddHHmmFormatter: function (time) {
+                var result = "";
+                if (time != null) {
+                    var datetime = new Date(time);
+                    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                    var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                    var hour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                    var minutes = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                    result = datetime.getFullYear() + "-" + month + "-" + currentDate + " " + hour + ":" + minutes;
+                    if (result == "1970-01-01") {
+                        result = "";
+                    }
+                }
+                return result;
+            },
+            yyyyMMddHHmmssFormatter: function (time) {
+                var result = "";
+                if (time != null) {
+                    var datetime = new Date(time);
+                    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                    var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                    var hour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+                    var minutes = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+                    var seconds = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+                    result = datetime.getFullYear() + "-" + month + "-" + currentDate + " " + hour + ":" + minutes + ":" + seconds;
+                    if (result == "1970-01-01") {
+                        result = "";
+                    }
+                }
+                return result;
+            },
+            ShortTimeFormatter: function (time) {
+                var result = "";
+                if (time != null) {
+                    var datetime = new Date(time);
+                    var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+                    var currentDate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+                    result = datetime.getFullYear() + "-" + month + "-" + currentDate;
+                    if (result == "1970-01-01") {
+                        result = "";
+                    }
+                }
+                return result;
+            },
+            LastTimeFormatter: function (time) {
+                return $.getDateDiff(time);
+            },
+            ///是否选中
+            IsCheck: function(value) {
+                var result = false;
+                var ReceiveUsers = $("#ReceiveUsers").val();
+                if(ReceiveUsers.indexOf(value) > 0) {
+                    result = true;
+                }
+                return result;
+            },
+            ///获取邮件阅读情况
+            GetReadRecordString: function (data) {
+                var num = 0;
+                $.each(data, function (i, e) {
+                    if (e.ReadStatus === "已读") {
+                        num++;
+                    }
+                });
+                return "总计：" + data.length + "人 （已读：" + num.toString() + " |" + " 未读：" + (data.length - num).toString() + "）";
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="divMessage" style="text-align:center;width: 100%;">
+    <span style="color:red;">暂无统计数据</span>
+</div>
+<div class="hide" id="LeaveApplyPassMonthEChart" style="width:100%;height:250px;"></div>
+<script type="text/javascript" src="/SchoolMobile/Content/js/echarts.min.js"></script>
+<script type="text/javascript">
+    //getUserInfo('86CEB442-60E3-4B37-A48B-5B79A40099EB','','13A176DB-2A09-4373-B1FE-F358032AB625','');
+    /*获取用户信息*/
+    function getUserInfo(userId, userName, schoolId, schoolName) {
+        $.getJSON(_ROOT_Api_ + "Leave/GetStatisticsLeaveApplyPassList?schoolId=" + schoolId + "&userId=" + userId, {}, function (data) {
+            if (data.Result !== null) {
+                if (data.Result.length > 0) {
+                    var mydate = new Date();
+                    var year = mydate.getFullYear();
+                    var leaveApplyPassMonthContainer = document.getElementById("LeaveApplyPassMonthEChart");
+                    var resizeWorldMapContainer = function () {
+                        leaveApplyPassMonthContainer.style.width = window.innerWidth + 'px';
+                        leaveApplyPassMonthContainer.style.height = window.innerHeight + 'px';
+                    };
+                    resizeWorldMapContainer();
+                    var leaveApplyPassMonthEChart = echarts.init(leaveApplyPassMonthContainer);
+                    var leaveNumber = new Array();
+                    for (var i = 1; i < 13; i++) {
+                        var value = 0;
+                        var month = Enumerable.From(data.Result).Where("d=>d.Month=='" + i + "'").ToArray();
+                        if (month.length > 0) {
+                            value = month[0].Count;
+                        }
+                        leaveNumber.push(value);
+                    }
+                    // 指定图表的配置项和数据
+                    var leaveApplyPassMonthOption = {
+                        title: {
+                            x: 'center',
+                            text: year + '年请假次数统计图'
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            top: 30,
+                            right: 0,
+                            data: ['请假']
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        toolbox: {
+                            show: false,
+                            orient: 'vertical',
+                            feature: {
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [{
+                            name: '请假',
+                            type: 'line',
+                            stack: '次数',
+                            itemStyle: { normal: { label: { show: true } } },
+                            data: leaveNumber
+                        }]
+                    };
+                    leaveApplyPassMonthEChart.setOption(leaveApplyPassMonthOption);
+                    //用于使chart自适应高度和宽度
+                    window.onresize = function () {
+                        leaveApplyPassMonthEChart.resize();
+                    };
+
+                    $("#divMessage").addClass("hide");
+                    $("#LeaveApplyPassMonthEChart").removeClass("hide");
+                } else {
+                    $("#divMessage").removeClass("hide");
+                    $("#LeaveApplyPassMonthEChart").addClass("hide");
+                }
+            } else {
+                $("#divMessage").removeClass("hide");
+                $("#LeaveApplyPassMonthEChart").addClass("hide");
+            }
+        });
+
+        // 使用刚指定的配置项和数据显示图表。
+    }
+</script>
+
+</body>
+</html>

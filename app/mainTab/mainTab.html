@@ -1,0 +1,269 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="center sliding" onclick="MSEOP.Webview.close()">移动校园</div>
+    </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through tabbar-labels-through">
+    <!-- Page, data-page contains page name-->
+    <div data-page="mainTab" class="page">
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels toolbar-fixed toolbar-bottom">
+            <div class="toolbar-inner">
+                <a href="#tab1" class="tab-link active">
+                    <i class="f7-icons inactive">chat</i>
+                    <i class="f7-icons active">chat_fill</i>
+                    <span class="tabbar-label">消息</span>
+                </a>
+                <a id="tab2Link" href="#tab2" class="tab-link">
+                    <i class="f7-icons inactive">more_round</i>
+                    <i class="f7-icons active">more_round_fill</i>
+                    <span class="tabbar-label">教学</span>
+                </a>
+                <a id="tab3Link" href="#tab3" class="tab-link">
+                    <i class="f7-icons inactive">persons</i>
+                    <i class="f7-icons active">persons_fill</i>
+                    <span class="tabbar-label">联系人</span>
+                </a>
+                <a id="tab4Link" href="#tab4" class="tab-link">
+                    <i class="f7-icons inactive">person</i>
+                    <i class="f7-icons active">person_fill</i>
+                    <span class="tabbar-label">我的</span>
+                </a>
+            </div>
+        </div>
+        <!-- Scrollable page content-->
+        <div class="page-content tabs">
+            <!--<div class="">-->
+            <div id="tab1" class="tab active pull-to-refresh-content" style="height: 100%">
+                <!--style="height: 100%"-->
+                <div class="content-block messageContent-block" id="tab1ContentBlock">
+                    <!--pull-to-refresh-content-->
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+
+                    <!-- 下面是正文 -->
+                    <div class="list-block media-list mBlist-block" style="margin-top: 0;">
+
+                        <ul id="messageBoxUl"></ul>
+                    </div>
+
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+                <div class="content-block" style="font-size: 0;margin-top: 0;padding: 5px 0;">
+                    <div class="card">
+                        <div class="card-header">通用功能</div>
+                        <div id="3" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Leave/LeaveIndex" class="appWrapper animated">
+                            <img class="" src="img/service.png">
+                            <div class="appName">请假管理</div>
+                        </div>
+                        <div id="4" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Car/Index" class="appWrapper animated">
+                            <img class="" src="img/photo.png">
+                            <div class="appName">车辆管理</div>
+                        </div>
+                        <div id="5" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Home/StudentIndex"
+                             class="appWrapper animated">
+                            <img class="" src="img/article.png">
+                            <div class="appName">学生桌面</div>
+                        </div>
+                        <div id="55" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Home/TeacherIndex"
+                             class="appWrapper animated">
+                            <img class="" src="img/news.png">
+                            <div class="appName">教师桌面</div>
+                        </div>
+                        <div id="6" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Notice/NoticeIndex"
+                             class="appWrapper animated">
+                            <img class="" src="img/unit.png">
+                            <div class="appName">通知公告</div>
+                        </div>
+                        <div id="7" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/Leave/PurchaseIndex"
+                             class="appWrapper animated">
+                            <img class="" src="img/set.png">
+                            <div class="appName">申购管理</div>
+                        </div>
+                        <div id="8" moduleUrl="http://hsefzcz.istudy.sh.cn/SchoolMobile/MeetingRoom/Index"
+                             class="appWrapper animated">
+                            <img class="" src="img/shareIcon.png">
+                            <div class="appName">会议室预约</div>
+                        </div>
+                    </div>
+                    <div class="card margin-t15">
+                        <div class="card-header">学前教育</div>
+                        <div id="xg" moduleUrl="" class="col-25 appWrapper animated">
+                            <img class="" src="img/score.png">
+                            <div class="appName">每日菜谱</div>
+                        </div>
+                        <div id="umeng" moduleUrl="" class="col-25 appWrapper animated">
+                            <img class="" src="img/news.png">
+                            <div class="appName">时时课堂</div>
+                        </div>
+                    </div>
+                    <div class="card margin-t15">
+                        <div class="card-header">基础教育</div>
+                        <div id="xg2" moduleUrl="" class="col-25 appWrapper animated">
+                            <img class="" src="img/downloadIcon.png">
+                            <div class="appName">在线家访</div>
+                        </div>
+                        <div id="umeng2" moduleUrl=""
+                             class="col-25 appWrapper animated">
+                            <img class="" src="img/cunchu.png">
+                            <div class="appName">学生表现</div>
+                        </div>
+                    </div>
+                    <div class="card margin-t15">
+                        <div class="card-header">成人教育</div>
+                        <div id="xg3" moduleUrl="" class="col-25 appWrapper animated">
+                            <img class="" src="img/ellipse.png">
+                            <div class="appName">课程安排</div>
+                        </div>
+                        <div id="umeng3" moduleUrl=""
+                             class="col-25 appWrapper animated">
+                            <img class="" src="img/upgradeIcon.png">
+                            <div class="appName">作业提交</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab">
+                <form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+                    <div class="searchbar-input">
+                        <input type="search" placeholder="输入分组或联系人"><a href="#" class="searchbar-clear"></a>
+                    </div>
+                    <a href="#" class="searchbar-cancel">取消</a>
+                </form>
+                <div class="searchbar-overlay"></div>
+                <div class="list-block searchbar-not-found">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">没有找到分组或联系人...</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title" style="margin-top: 20px;">群组</div>
+                <div class="list-block media-list search-here searchbar-found" style="margin-top: 10px;">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-link item-content contactGroup">
+                                <div class="item-media">
+                                    <img src="img/contactIcon/1.jpg" width="44">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                        <div class="item-title">语文教研组</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content contactGroup">
+                                <div class="item-media">
+                                    <img src="img/contactIcon/4.jpg" width="44">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                        <div class="item-title">三年级班主任</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content contactGroup">
+                                <div class="item-media">
+                                    <img src="img/contactIcon/5.jpg" width="44">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row" style="margin-top: 10px;margin-bottom: 10px;">
+                                        <div class="item-title">周五值班组</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title" style="margin-top: 20px;">组织架构</div>
+                <div class="list-block media-list search-here searchbar-found" style="margin-top: 10px;">
+                    <ul id="departmentUl"></ul>
+                </div>
+            </div>
+            <div id="tab4" class="tab">
+                <div class="list-block media-list myInfo_s">
+                    <ul>
+                        <li><a href="#" class="item-link item-content">
+                            <div class="item-media">
+                                <img style="border-radius: 35px;"
+                                     src="img/contactIcon/2.jpg" width="70">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title mT8">
+                                    <div class="item-title" id="displayName">-</div>
+                                    <!--<div class="item-after"></div>-->
+                                </div>
+                                <div class="item-subtitle mT12">账号：<span id="userName">-</span></div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="list-block mT15">
+                    <ul>
+                        <li class="MyStatistics"><a href="#" class="item-link item-content">
+                            <div class="item-media"><i class="icon listIconBImg statisticsBImg"></i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">我的统计</div>
+                            </div>
+                        </a></li>
+                        <li class="ArticleList"><a href="#" class="item-link item-content">
+                            <div class="item-media"><i class="icon listIconBImg articleBImg"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">文章日志</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="list-block mT15">
+                    <ul>
+                        <li class="ServiceCenter"><a href="#" class="item-link item-content">
+                            <div class="item-media"><i class="icon listIconBImg serviceBImg"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">服务中心</div>
+                            </div>
+                        </a></li>
+                        <li><a href="#" class="item-link item-content">
+                            <div class="item-media"><i class="icon listIconBImg scoreBImg"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">设置</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="list-block mT15">
+                    <ul>
+                        <li><a href="#" onclick="exit()" class="item-link item-content">
+                            <div class="item-media"><i class="icon listIconBImg setBImg"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">退出</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+                <!--<div class="list-block mT15">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#" onclick="clear()" class="item-link item-content">-->
+                            <!--<div class="item-media"><i class="icon listIconBImg setBImg"></i></div>-->
+                            <!--<div class="item-inner">-->
+                                <!--<div class="item-title">清除缓存（测试）</div>-->
+                            <!--</div>-->
+                        <!--</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+

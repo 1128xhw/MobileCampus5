@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>send message</title>
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var data = {
+        "Application": {
+            "Id": "7cfb7f8e-56e6-4e51-854a-a8d5af6e01a6",
+            "Name": "申购"
+        },
+        "Sender": {
+            "Id": "ac8999d9-66df-4167-8ef4-84aea23d0f38",
+            "Name": "杨冰"
+        },
+        "Title": "申购申请",
+        "Body": "<p>杨冰老师于2017/3/24 18:12:25给你发送申购申请的内容详情。</p>",
+        "Receivers": [
+            {
+                "Id": "4fef2168-d732-4920-809d-0c8b5c661b4b",
+                "Name": "陈晨"
+            }
+        ],
+        "Payload": {},
+        "SendTime": "2017-03-31T17:38:59.3700004+08:00"
+    };
+    var url = 'http://hsefzcz.istudy.sh.cn/MessageCenter.WebApiService/api/Message';
+    $.ajax({
+        url: url,
+        type:'POST',
+        data: data,
+        dataType:'json',
+        success:function(data){
+            //alert(1)
+            console.log(data);
+        },
+        error:function(a,b,c){
+            alert(JSON.stringify(b))
+        },
+        complete:function(){
+
+        }
+    })
+</script>
+</body>
+</html>

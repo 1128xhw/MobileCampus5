@@ -1,0 +1,43 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>返回</span></a></div>
+        <div class="center sliding">我的信息</div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="contactList" class="page no-toolbar">
+        <form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input type="search" placeholder="输入分组或联系人"><a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel">取消</a>
+        </form>
+        <div class="searchbar-overlay"></div>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="list-block searchbar-not-found">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title">没有找到分组或联系人...</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block search-here searchbar-found">
+                <div class="list-block contacts-block">
+                    <div class="list-group">
+                        <ul id="contactListUl"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

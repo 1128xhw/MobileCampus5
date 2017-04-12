@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="expires" content="0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>移动校园</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="css/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fonts/css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css?dasdfasfsdg">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/MSEOP.css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="stylesheet" href="login/assets/css/style.css">
+</head>
+<body class="framework7-root">
+
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<!--<div class="panel panel-left panel-reveal">-->
+<!--<div class="content-block">-->
+<!--<p>Left panel content goes here</p>-->
+<!--</div>-->
+<!--</div>-->
+<!-- Right panel with cover effect-->
+<!--<div class="panel panel-right panel-cover">-->
+<!--<div class="content-block">-->
+<!--<p>Right panel content goes here</p>-->
+<!--</div>-->
+<!--</div>-->
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main" id="indexView">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <!-- We have home navbar without left link-->
+                <div class="center sliding" onclick="MSEOP.Webview.close()">移动校园</div>
+                <!--<div class="right">-->
+                <!--&lt;!&ndash; Right link contains only icon - additional "icon-only" class&ndash;&gt;-->
+                <!--<a href="#" class="link icon-only open-panel">-->
+                <!--<i class="icon icon-bars"></i></a>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through tabbar-labels-through">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content">
+                    <div class="tabs">
+                        <div id="tab1" class="tab active">
+                            <div class="content-block messageContent-block">
+                                <!--pull-to-refresh-content-->
+                                <!--<div class="pull-to-refresh-layer">-->
+                                <!--<div class="preloader"></div>-->
+                                <!--<div class="pull-to-refresh-arrow"></div>-->
+                                <!--</div>-->
+
+                                <!-- 下面是正文 -->
+                                <div class="list-block media-list mBlist-block" style="margin-top: 0;">
+                                    <ul id="messageBoxUl"></ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab">
+                            <div class="content-block" style="font-size: 0;margin-top: 0;padding: 5px 0;">
+                                <div class="card" style="width: 95%;">
+                                    <div class="card-header">通用功能</div>
+                                    <div id="3" moduleUrl="appModule/camera.html" class="appWrapper animated">
+                                        <img class="" src="img/camera.png">
+                                        <div class="appName">相机</div>
+                                    </div>
+                                    <div id="4" moduleUrl="appModule/location.html" class="appWrapper animated">
+                                        <img class="" src="img/location-b.png">
+                                        <div class="appName">定位</div>
+                                    </div>
+                                    <div id="5" moduleUrl="appModule/barcodeScanner.html"
+                                         class="appWrapper animated">
+                                        <img class="" src="img/erweima.png">
+                                        <div class="appName">二维码扫描</div>
+                                    </div>
+                                    <div id="6" moduleUrl="appModule/systemInfo.html"
+                                         class="appWrapper animated">
+                                        <img class="" src="img/equilizer.png">
+                                        <div class="appName">系统信息</div>
+                                    </div>
+                                    <div id="7" moduleUrl="appModule/networkInfo.html"
+                                         class="appWrapper animated">
+                                        <img class="" src="img/wifi2-orange.png">
+                                        <div class="appName">网络状态</div>
+                                    </div>
+                                    <div id="8" moduleUrl="appModule/device.html" class="appWrapper animated">
+                                        <img class="" src="img/phone.png">
+                                        <div class="appName">设备功能</div>
+                                    </div>
+                                </div>
+                                <div class="card margin-t15">
+                                    <div class="card-header">学前教育</div>
+                                    <div id="xg" moduleUrl="appModule/xinGe.html" class="col-25 appWrapper animated">
+                                        <img class="" src="img/xglogo.png">
+                                        <div class="appName">信鸽</div>
+                                    </div>
+                                    <div id="umeng" moduleUrl="appModule/umeng.html" class="col-25 appWrapper animated">
+                                        <img class="" src="img/umenglogo.png">
+                                        <div class="appName">友盟</div>
+                                    </div>
+                                </div>
+                                <div class="card margin-t15">
+                                    <div class="card-header">基础教育</div>
+                                    <div id="xg2" moduleUrl="appModule/xinGe.html" class="col-25 appWrapper animated">
+                                        <img class="" src="img/xglogo.png">
+                                        <div class="appName">信鸽</div>
+                                    </div>
+                                    <div id="umeng2" moduleUrl="appModule/umeng.html"
+                                         class="col-25 appWrapper animated">
+                                        <img class="" src="img/umenglogo.png">
+                                        <div class="appName">友盟</div>
+                                    </div>
+                                </div>
+                                <div class="card margin-t15">
+                                    <div class="card-header">成人教育</div>
+                                    <div id="xg3" moduleUrl="appModule/xinGe.html" class="col-25 appWrapper animated">
+                                        <img class="" src="img/xglogo.png">
+                                        <div class="appName">信鸽</div>
+                                    </div>
+                                    <div id="umeng3" moduleUrl="appModule/umeng.html"
+                                         class="col-25 appWrapper animated">
+                                        <img class="" src="img/umenglogo.png">
+                                        <div class="appName">友盟</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab">
+                            <div class="content-block">
+                                <div class="list-block contacts-block">
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">C</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">蔡瑞峰</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">曹波</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">陈蜜</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">陈敏娜</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">陈清</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">陈彦志</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">陈雨娟</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">程婷</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">D</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">戴勇捷</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">丁晴</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">丁婷婷</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">丁香</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">F</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">冯寒冰</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">付添宝</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">G</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">顾敏</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">郭雅茹</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">H</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">何深学</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">何祥晖</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">胡瑞鑫</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">黄文安</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">J</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">姜翼遥</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">K</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">柯丞</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">柯露露</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">柯明锐</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">柯秀琴</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">柯于婷</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-group">
+                                        <ul>
+                                            <li class="list-group-title">L</li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">李梦</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">李欣</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">刘聪</div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-content">
+                                                    <div class="item-media"><img src="img/i-f7-ios.png"
+                                                                                 class="contactIcon"></div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title">刘颖</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab">
+                            <!--<div class="content-block">-->
+                            <div class="list-block media-list myInfo_s">
+                                <ul>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media">
+                                            <img style="border-radius: 35px;"
+                                                 src="http://lorempixel.com/160/160/people/1" width="70">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title mT8">
+                                                <div class="item-title">李雷</div>
+                                                <!--<div class="item-after"></div>-->
+                                            </div>
+                                            <div class="item-subtitle mT12">账号：Lilei</div>
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div class="list-block mT15">
+                                <ul>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg statisticsBImg"></i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title">我的统计</div>
+                                            <!--<div class="item-after">CEO</div>-->
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg articleBImg"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">文章日志</div>
+                                            <!--<div class="item-after">Cleaner</div>-->
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg photoBImg"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">相册</div>
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div class="list-block mT15">
+                                <ul>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg serviceBImg"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">服务中心</div>
+                                            <!--<div class="item-after">CEO</div>-->
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg scoreBImg"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">积分规则</div>
+                                            <!--<div class="item-after">Cleaner</div>-->
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div class="list-block mT15">
+                                <ul>
+                                    <li><a href="#" class="item-link item-content">
+                                        <div class="item-media"><i class="icon listIconBImg setBImg"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title">设置</div>
+                                            <!--<div class="item-after">CEO</div>-->
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels toolbar-fixed toolbar-bottom">
+            <div class="toolbar-inner">
+                <a href="#tab1" class="tab-link active">
+                    <i class="f7-icons inactive">chat</i>
+                    <i class="f7-icons active">chat_fill</i>
+                    <span class="tabbar-label">消息</span>
+                </a>
+                <a id="tab2Link" href="#tab2" class="tab-link">
+                    <i class="f7-icons inactive">more_round</i>
+                    <i class="f7-icons active">more_round_fill</i>
+                    <span class="tabbar-label">教学</span>
+                </a>
+                <a id="tab3Link" href="#tab3" class="tab-link">
+                    <i class="f7-icons inactive">persons</i>
+                    <i class="f7-icons active">persons_fill</i>
+                    <span class="tabbar-label">联系人</span>
+                </a>
+                <a id="tab4Link" href="#tab4" class="tab-link">
+                    <i class="f7-icons inactive">person</i>
+                    <i class="f7-icons active">person_fill</i>
+                    <span class="tabbar-label">我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--modal-in-->
+<div class="login-screen modal-in">
+    <div class="view">
+        <!--<div class="navbar">-->
+        <!--<div class="navbar-inner">-->
+        <!--&lt;!&ndash; We have home navbar without left link&ndash;&gt;-->
+        <!--<div class="center sliding" onclick="MSEOP.Webview.close()">移动校园</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="pages navbar-through tabbar-labels-through">
+            <div data-page="login" class="page">
+                <div id="loginPageContent" class="page-content">
+                    <div class="page-container">
+                        <h1 id="loginTitle">移动校园</h1>
+                        <form id="loginForm">
+                            <input type="text" name="username" class="username loginInput" placeholder="用户名">
+                            <input type="password" name="password" class="password loginInput" placeholder="密码">
+                            <button id="loginButton" type="button">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                            <div class="error"><span>+</span></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<!--<script type="text/javascript" src="js/framework7.min.js"></script>-->
+<!--<script src="http://192.168.1.110:1234/target/target-script-min.js#anonymous"></script>-->
+<script type="text/javascript" src="js/jquery-2.0.min.js"></script>
+<script type="text/javascript" src="js/framework7.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/MSEOP-SDK.js?fhgdsfsdhg"></script>
+<script type="text/javascript" src="js/my-app.js?dgdafsdfassdafdj"></script>
+<script type="text/javascript" src="message/js/messageBox.js"></script>
+<script type="text/javascript" src="message/js/messageList.js"></script>
+<script type="text/javascript" src="login/assets/js/supersized.js"></script>
+<script type="text/javascript" src="login/assets/js/loginScripts.js"></script>
+<script type="text/javascript" src="js/appModule/barcodeScanner.js"></script>
+<script type="text/javascript" src="js/appModule/camera.js"></script>
+<script type="text/javascript" src="js/appModule/device.js"></script>
+<script type="text/javascript" src="js/appModule/networkInfo.js"></script>
+<script type="text/javascript" src="js/appModule/systemInfo.js"></script>
+<script type="text/javascript" src="js/appModule/umeng.js"></script>
+<script type="text/javascript" src="js/appModule/xinGe.js"></script>
+<script type="text/javascript" src="js/appModule/location.js"></script>
+<script type="text/javascript" src="js/appModule/download.js"></script>
+<script type="text/javascript" src="js/appModule/filemanagement.js"></script>
+<script type="text/javascript" src="js/appModule/upgrade.js"></script>
+<script type="text/javascript" src="js/appModule/share.js"></script>
+<script type="text/javascript" src="js/kitchen-sink.js"></script>
+</body>
+</html>
